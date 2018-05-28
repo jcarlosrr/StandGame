@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block section %}
+{% endblock %}
+
+{% block section1 %}
+
+  <div class="justify-content-md-center paddingtop">
+<h1 class="h1Catalogo text-center">{{ juego.tituloJuego}}</h1>
+
+<ul class="list-group">
+    
+        <li class="list-group-item list-group-item list-group-item-action my-1">
+            
+            <p>
+                <p>Genero: <i>{{ juego.generoJuego }}</i></p> 
+                <p>Idioma:<i>{{juego.idiomaJuego}}</i></p>
+                <p>Numero de jugadores: <i>{{ juego.numeroJugador }}</i></p>
+                <p>Fecha de lanzamiento: <i>{{ juego.fechaLanzamiento }}</i></p>
+                <p>Compañia: <i>{{ juego.companiaJuego }}</i></p>
+                <p>Plataforma de juego: <i>{{ juego.plataformaJuego }}</i></p>
+				<p>Editor: <i>{{ juego.editorJuego }}</i></p>
+                <img class="imgfields" src='{{MEDIA_URL}}{{juego.imagen.url}}'/>
+
+            </p>
+        </li>
+ 		<p>
+    <a class="btn btn-secondary" href="{% url "soporte:list" %}">volver</a>
+</p>
+</ul>
+</div>
+
+{% endblock %}
+
+

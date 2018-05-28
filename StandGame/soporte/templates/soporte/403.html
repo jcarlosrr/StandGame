@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+    {% block section %}
+    
+    <div class="row paddingtop text-center">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                 <div class="">
+            <img src="{% static '/imagenes/error-403.png' %}" class="img-fluid coldimg" alt="Error 403">
+            <h1 class=""> Error 403 </h1>
+            <p class="">No tiene permiso para acceder a esta página</p>
+             
+             {% if user.is_authenticated %}
+            <a class="btn btn-secondary" href="{% url "soporte:list" %}">volver</a>
+
+            {% else %}
+             <a  class="btn btn-success" href="{% url 'auth_login' %}">Login</a>
+             <a class="btn btn-secondary" href="{% url "soporte:list" %}">volver</a>
+
+            {% endif %}
+
+            </div>
+            <div class="col-md-4">
+            </div>
+             </div>
+        
+    {% endblock %}
+
+    {% block section1 %}
+    {% endblock %}
+
+    {% block section2 %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}

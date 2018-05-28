@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block section %}
+{% endblock %}
+
+{% block section1 %}
+
+<div class="justify-content-md-center paddingtop">
+<form method="post">{% csrf_token %}
+    ¿Estás seguro que deseas borrar el juego "{{ juego.tituloJuego }}"?
+  <input class="btn btn-danger" type="submit" value="Eliminar"/>
+  <a class="btn btn-secondary" href="{% url "soporte:list" %}">Volver</a>
+</form>
+</div>
+{% endblock %}

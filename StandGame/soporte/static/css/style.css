@@ -1,0 +1,105 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, p{
+	font-family: 'Roboto', sans-serif;
+}
+.topheader{
+	background-color:#2987f1;
+	padding:20px ;
+}
+
+.h1Principal{
+	color:#ffffff;
+	font-weight: 900 ;
+	font-size:5em ;
+}
+
+.h1Catalogo{
+	color:#000000;
+	font-weight: 900 ;
+	font-size:5em ;
+}
+
+.h1Buscar{
+	color:#000000;
+	font-weight: 900 ;
+	font-size:2em ;
+	text-align: center;
+}
+
+.h1Login{
+	color:#000000;
+	font-weight: 900 ;
+	font-size:4em ;
+	text-align: center;
+}
+.pprincipal{
+	color:#ffffff;
+	font-weight: bold;
+	font-size:2em ; 
+}
+
+.imagenFondo{
+	
+	background:url('/static/imagenes/fondo-01.jpg');
+	height:100vh;
+	background-size:cover;
+	background-position:center; 
+}
+
+.opacidadFondo{
+	background-color: rgba(0,0,0,.5);
+	height:100vh;
+}
+
+
+.coldimg{
+	width:500px ;
+}
+
+.rankingcolor{
+	background-color:#2987f1;
+}
+
+.h2ranking{
+	font-size:4em;
+	font-weight: bold ;
+}
+
+.display-4{
+	font-size: 2em;
+}
+
+.footerPie{
+color:#ffffff;
+background-color:#2a2727;
+padding:30px ;
+}
+
+.imgfields{
+	height: 350px;
+}
+.imgregistercomplete{
+	height: 250px;
+}
+.imgthumbnail{
+	height: 50px;
+}
+
+.paddingtop{
+padding-top:7rem ;
+}
+
+.usuarioact{
+	border-bottom: #043b81 solid 1px;
+}
+
+.usucerrar{
+	color:#043b81;
+}
+
+.cdisplayblock{
+	display: block;
+}

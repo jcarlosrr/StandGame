@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block section1 %}
+
+  <div class="justify-content-md-center">
+<h1 class="h1Catalogo text-center">Catalogo de juegos</h1>
+
+
+<div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col">
+     
+    </div>
+  </div>
+
+<ul class="list-group">
+   
+    {% for juego in object_list %}
+     
+        <li class="list-group-item list-group-item list-group-item-action list-group-item-primary my-1">
+            <p>{{ juego.tituloJuego }}</p>
+            <img class="imgthumbnail" src='{{MEDIA_URL}}{{juego.imagen.url}}'/>
+            <p>
+                <a href="{% url "soporte:detail" juego.id %}">Ver juego ·</a>
+                {% if user.is_staff %}
+                <a href="{% url "soporte:edit" juego.id %}">Modificar juego ·</a>
+                <a href="{% url "soporte:delete" juego.id %}">Eliminar juego</a> 
+                {% endif%}
+   
+            </p>
+        </li>
+    {% endfor %}
+</ul>
+    </div>
+
+{% endblock %}
+

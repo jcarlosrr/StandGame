@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block section %}
+
+{% endblock %}
+
+{% block section1 %}
+<div class="container paddingtop">
+<h1 class="h1Login">Registrarse</h1>
+<form method="post" action=".">
+{% csrf_token %}
+
+
+<div class="row text-center">
+
+<div class="col-sm-4 mx-auto">
+<ul class="list-group">
+    
+        <li class="list-group-item my-1">
+            
+            <p>
+                <p>Nombre de usuario: <i class="cdisplayblock">{{ form.username }}</i> <p>Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_</p></p> 
+                <p>Correo electronico: <i class="cdisplayblock">{{ form.email }}</i></p> 
+                <p>Contraseña:<i class="cdisplayblock">{{ form.password1 }}</i>
+                	<p>Su contraseña debe contener al menos 8 caracteres.</p> 
+                	<p>Su contraseña no puede ser completamente numérica</p> </p>
+                <p>Contraseña (Confirmación):<i class="cdisplayblock">{{ form.password2 }}</i></p>
+                
+            </p>
+        </li>
+	<p>
+	<input class="btn btn-primary" type="submit" value="Registrarse" />
+	</p>
+</ul>
+
+</div>
+ </div>
+
+
+</form>
+</div>
+{% endblock%}
+
+
+<!--{#% extends 'base/base.html' %#}
+{#% block section1 %#}
+
+<h1>Registrarse</h1>
+<form method="post" action=".">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Registrarse" />
+</form>
+{#% endblock %#}-->
+
+
+
